@@ -239,7 +239,6 @@
                 event.preventDefault();
 
                 var username = document.getElementById('username').value || '𓄂ʷᵃʳᵖᵢₚᵥ₄𓆃';
-                var license = document.getElementById('license').value || '';
                 var type1 = document.getElementById('type1').value || '40-80';
                 var type2 = document.getElementById('type2').value || '40-10';
                 var type3 = document.getElementById('type3').value || '2-4';
@@ -250,7 +249,7 @@
                 var auto = document.getElementById('autoFillCheckbox').checked ? 'true' : 'false';
 
                 
-                var licenseValue = license ? `warp://${license}@${ip}:${port}/?ifp=${type1}&ifps=${type2}&ifps=${type3}&ifpm=${type4}#${username}` : `warp://${ip}:${port}/?ifp=${type1}&ifps=${type2}&ifpd=${type3}&ifpm=${type4}#${username}`;
+                var licenseValue = `warp://${ip}:${port}/?ifp=${type1}&ifps=${type2}&ifpd=${type3}&ifpm=${type4}#${username}`;
                 
                 var url = `${(licenseValue)}`;
 
