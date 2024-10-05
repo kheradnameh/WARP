@@ -119,15 +119,11 @@
 
     
     <div class="container">
-        <h2>𓄂ʷᵃʳᵖᵢₚᵥ₆ 𓆃</h2>
+        <h2>WARP IPv6</h2>
         <form id="warpinatorForm">
             <div class="input-field">
                 <input id="username" type="text" name="Name Config" class="form-control">
                 <label for="username">Name Config </label>
-            </div>
-            <div class="input-field">
-                <input id="license" type="text" name="license" class="form-control">
-                <label for="license">License Warp Key </label>
             </div>
             <div class="input-field">
               <div class="select-container">
@@ -241,8 +237,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('warpinatorForm').addEventListener('submit', function(event) {
                 event.preventDefault();
-                var username = document.getElementById('username').value || '𓄂ʷᵃʳᵖᵢₚᵥ₆ 𓆃';
-                var license = document.getElementById('license').value || '';
+                var username = document.getElementById('username').value || 'WARP IPv6';
                 var type1 = document.getElementById('type1').value || '40-80';
                 var type2 = document.getElementById('type2').value || '40-10';
                 var type3 = document.getElementById('type3').value || '2-4';
@@ -252,7 +247,7 @@
                 var auto = document.getElementById('autoFillCheckbox').checked ? 'false' : 'true';
 
                
-                var licenseValue = license ? `warp://${license}@${ip}/?ifp=${type1}&ifps=${type2}&ifps=${type3}&ifpm=${type4}#${username}` : `warp://${ip}/?ifp=${type1}&ifps=${type2}&ifpd=${type3}&ifpm=${type4}#${username}`;
+                var licenseValue = `warp://${ip}/?ifp=${type1}&ifps=${type2}&ifpd=${type3}&ifpm=${type4}#${username}`;
                 
                 var url = `${(licenseValue)}`;
 
