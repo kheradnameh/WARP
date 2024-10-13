@@ -252,7 +252,7 @@
                 var auto = document.getElementById('autoFillCheckbox').checked ? 'false' : 'true';
 
                
-                var licenseValue = `warp://${ip}/?ifp=${type1}&ifps=${type2}&ifpd=${type3}&ifpm=${type4}#${username}`;
+                var licenseValue = license ? `warp://${license}@${ip}:${port}/?ifp=${type1}&ifps=${type2}&ifps=${type3}&ifpm=${type4}#${username}` : `warp://${ip}:${port}/?ifp=${type1}&ifps=${type2}&ifpd=${type3}&ifpm=${type4}#${username}`;
                 
                 var url = `${(licenseValue)}`;
 
